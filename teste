@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Teste de execução da classe PHPCreateForm</title>
+    </head>
+    <body>
+        <?php
+            require_once "class/PHPCreateForm.php";
+            require_once "class/PHPDesignForm.php";
+
+            $phpcreateform = new PHPCreateForm();
+            $phpdesignform = new PHPDesignForm();
+
+            //Setting form data
+            $phpcreateform->setNameForm("testeForm");
+            $phpcreateform->setActionForm("www.facebook.com");
+            $phpcreateform->setMethodForm("POST");
+
+            //Creating Form
+            $phpcreateform->createForm();
+            echo "\n    ". "    ". "    ";
+
+            //Setting Label Span data
+            $phpcreateform->setLabel("Nome");
+            $phpcreateform->setTypeField("span");
+            $phpcreateform->setIdField("span01");
+            $phpcreateform->createLabel();
+            $phpcreateform->closeField();
+            echo "\n    ". "    ". "    ";
+
+            //Setting Input data
+            $phpcreateform->setTypeField("input");
+            $phpcreateform->setIdField("name");
+            $phpcreateform->setType("text");
+            $phpcreateform->setClassField("name");
+            $phpcreateform->createField();
+            echo "\n    ". "    ". "    ";
+
+            //Setting Space
+            $phpcreateform->createSpace();
+            echo "\n    ". "    ". "    ";
+
+            //Setting Label Span data
+            $phpcreateform->setLabel("Address");
+            $phpcreateform->setTypeField("span");
+            $phpcreateform->setIdField("span02");
+            $phpcreateform->createLabel();
+            $phpcreateform->closeField();
+            echo "\n    ". "    ". "    ";
+
+            //Setting Input data
+            $phpcreateform->setTypeField("input");
+            $phpcreateform->setIdField("address");
+            $phpcreateform->setType("text");
+            $phpcreateform->setClassField("address");
+            $phpcreateform->createField();
+            echo "\n    ". "    ". "    ";
+
+            //Setting Space
+            $phpcreateform->createSpace();
+            echo "\n    ". "    ". "    ";           
+
+            //Setting Label Span data
+            $phpcreateform->setLabel("Neighborhood");
+            $phpcreateform->setTypeField("span");
+            $phpcreateform->setIdField("span03");
+            $phpcreateform->createLabel();
+            $phpcreateform->closeField();
+            echo "\n    ". "    ". "    ";
+
+            //Setting Input data
+            $phpcreateform->setTypeField("input");
+            $phpcreateform->setIdField("neighborhood");
+            $phpcreateform->setType("text");
+            $phpcreateform->setClassField("neighborhood");
+            $phpcreateform->createField();
+            echo "\n    ". "    ". "    ";
+
+            //Setting Space
+            $phpcreateform->createSpace();
+            echo "\n    ". "    ". "    ";           
+
+            //Setting Label Span data
+            $phpcreateform->setLabel("House Number");
+            $phpcreateform->setTypeField("span");
+            $phpcreateform->setIdField("span04");
+            $phpcreateform->createLabel();
+            $phpcreateform->closeField();
+            echo "\n    ". "    ". "    ";
+
+            //Setting Input data
+            $phpcreateform->setTypeField("input");
+            $phpcreateform->setIdField("housenumber");
+            $phpcreateform->setType("text");
+            $phpcreateform->setClassField("housenumber");
+            $phpcreateform->createField();
+            echo "\n    ". "    ". "    ";
+
+            //Setting Space
+            $phpcreateform->createSpace();
+            echo "\n    ". "    ". "    ";
+
+            //Setting Label Span data
+            $phpcreateform->setLabel("Cellphone");
+            $phpcreateform->setTypeField("span");
+            $phpcreateform->setIdField("span05");
+            $phpcreateform->createLabel();
+            $phpcreateform->closeField();
+            echo "\n    ". "    ". "    ";
+
+            //Setting Input data
+            $phpcreateform->setTypeField("input");
+            $phpcreateform->setIdField("cellphone");
+            $phpcreateform->setType("tel");
+            $phpcreateform->setClassField("cellphone");
+            $phpcreateform->createField();
+            echo "\n    ". "    ";
+
+            $phpcreateform->setTypeField("form");
+            $phpcreateform->closeField();
+            echo "\n    ". "    ";
+
+            //Setting input style
+            $phpdesignform->setClassStyle("name");
+            $phpdesignform->setIdStyle("name");
+            $phpdesignform->setLeftPx("120px");
+            $phpdesignform->openingStyle();
+            $phpdesignform->idStyle();
+
+            //Setting input style
+            $phpdesignform->setClassStyle("address");
+            $phpdesignform->setIdStyle("address");
+            $phpdesignform->idStyle();
+
+            //Setting input style
+            $phpdesignform->setClassStyle("neighborhood");
+            $phpdesignform->setIdStyle("neighborhood");
+            $phpdesignform->idStyle();
+
+            //Setting input style
+            $phpdesignform->setClassStyle("housenumber");
+            $phpdesignform->setIdStyle("housenumber");
+            $phpdesignform->idStyle();
+
+            //Setting input style
+            $phpdesignform->setClassStyle("cellphone");
+            $phpdesignform->setIdStyle("cellphone");
+            $phpdesignform->idStyle();
+            $phpdesignform->closingStyle();
+            
+        ?>
+    </body>
+</html>
